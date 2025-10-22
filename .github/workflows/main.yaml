@@ -26,6 +26,6 @@ jobs:
         with:
           server: ftp.bariyo.com.ng
           username: go@bariyo.com.ng
-          password: Q7L](nGEs%L?rmY_
+          password: w5xf#Snr7_JOj-]g
           protocol: ftps
           local-dir: ./build/
