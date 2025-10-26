@@ -50,7 +50,7 @@ function CartItems() {
     <div className="w-full flex justify-center mb-10">
       <div className=" w-[90%] max-w-[1750px] flex justify-between gap-5">
         <div className="border flex-1 rounded-md p-3">
-          {cartItems ? (
+          {cartItems.length ? (
             <>
               {cartItems.map((value) => {
                 return (
