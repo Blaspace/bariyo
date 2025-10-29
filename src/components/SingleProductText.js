@@ -33,8 +33,8 @@ function SingleProductText({ product }) {
   };
 
   return (
-    <div className="flex flex-col gap-3 w-[40%]">
-      <h1 className="text-[35px] font-bold">{product?.name}</h1>
+    <div className="flex flex-col gap-3 md:w-[40%] ">
+      <h1 className="md:text-[35px] text-[20px] font-bold">{product?.name}</h1>
       <p>${product?.price}</p>
       <button
         className="h-[35px] border border-blue-500  bg-blue-500 rounded-md text-[#ffffff] text-[16px] flex gap-1 justify-center items-center w-full hover:bg-transparent hover:text-blue-500"

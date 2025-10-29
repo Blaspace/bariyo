@@ -29,17 +29,17 @@ function Signup() {
       <Popup message={message} setMessage={setMessage} />
       <div className="flex h-screen w-full justify-stretch">
         <section
-          className="flex-1 h-full bg-center bg-cover bg-no-repeat bg-gray-400 bg-blend-multiply"
+          className="flex-1 h-full bg-center bg-cover bg-no-repeat bg-gray-400 bg-blend-multiply hidden md:block"
           style={{
             backgroundImage: `url(${require("../public/banner.jpg")})`,
           }}
         ></section>
         <section className="flex-1 h-full flex justify-center items-center">
           <form
-            className="w-[70%] flex flex-col"
+            className="md:w-[70%] w-[90%] flex flex-col"
             onSubmit={(e) => handleSubmit(e)}
           >
-            <h2 className="font-bold text-center text-[30px]">
+            <h2 className="font-bold text-center text-[20px] md:text-[30px]">
               Welcome to Bariyo, please signup:
             </h2>
             <br />

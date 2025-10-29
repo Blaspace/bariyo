@@ -14,7 +14,7 @@ function Price({ items }) {
   }, [items]);
 
   return (
-    <div className="w-[350px] bg-gray-100 rounded-md p-3 flex flex-col gap-2 max-h-[220px] sticky top-2">
+    <div className="md:w-[350px]  border rounded-md p-3 flex flex-col gap-2 max-h-[220px] sticky top-2">
       <span className="w-full flex justify-between">
         <p className="text-[14px] text-gray-400">{items?.length} Items:</p>{" "}
         <p>${itemsCost}</p>

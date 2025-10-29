@@ -6,7 +6,6 @@ function UserOrder() {
   return (
     <div className="flex justify-center">
       <div className="flex w-[90%] max-w-[1750px] gap-4">
-        <Sidebar />
         <Orders />
       </div>
     </div>

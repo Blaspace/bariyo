@@ -48,21 +48,21 @@ function CartItems() {
 
   return (
     <div className="w-full flex justify-center mb-10">
-      <div className=" w-[90%] max-w-[1750px] flex justify-between gap-5">
+      <div className=" w-[90%] max-w-[1750px] flex flex-col justify-between gap-5 md:flex-row">
         <div className="border flex-1 rounded-md p-3">
-          {cartItems.length ? (
+          {cartItems?.length ? (
             <>
-              {cartItems.map((value) => {
+              {cartItems?.map((value) => {
                 return (
                   <div className="flex p-2 border-b justify-between ">
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 flex-col md:flex-row">
                       <img
-                        src={value.images[0]}
+                        src={value?.images[0]}
                         alt="product"
                         className="w-[100px] rounded-md  h-[100px]"
                       />
                       <span>
-                        <p className="font-bold">{value.name}</p>
+                        <p className="font-bold text-[14px]">{value?.name}</p>
                         <span className="flex gap-1 text-orange-400">
                           <IoIosStar size={16} />
                           <IoIosStar size={16} />
@@ -75,20 +75,20 @@ function CartItems() {
                             (65 peaple)
                           </p>
                         </span>
-                        <p>${value.price}</p>
+                        <p>${value?.price}</p>
                       </span>
                     </div>
                     <section className="flex flex-col gap-5 items-end">
                       <span className="w-[100px] h-[35px] border rounded-md flex justify-between">
                         <button
-                          onClick={() => handleIncrease(value.images)}
+                          onClick={() => handleIncrease(value?.images)}
                           className="p-3 text-[25px] bg-gray-100 flex justify-center items-center"
                         >
                           +
                         </button>
                         {value?.num}
                         <button
-                          onClick={() => handleDecrease(value.images)}
+                          onClick={() => handleDecrease(value?.images)}
                           className="p-3 text-[25px] bg-gray-100 flex justify-center items-center"
                         >
                           -
@@ -97,7 +97,7 @@ function CartItems() {
                       <FaRegTrashAlt
                         size={20}
                         color="red"
-                        onClick={() => handleRemoveItems(value.images)}
+                        onClick={() => handleRemoveItems(value?.images)}
                       />
                     </section>
                   </div>

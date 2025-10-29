@@ -32,7 +32,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative h-[90vh] w-full overflow-hidden">
+    <div className="relative h-[40vh] w-full overflow-hidden md:h-[90vh]">
       {/* Background transition */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -67,7 +67,7 @@ const HeroSection = () => {
         </AnimatePresence>
           <a href='/shop'>
         <motion.button
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.00 }}
           className="bg-white text-gray-900 px-6 py-3 rounded-full text-lg font-semibold mt-4"
         >
           Shop Now

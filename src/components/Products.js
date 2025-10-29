@@ -42,21 +42,21 @@ function Products({ products }) {
     <>
       <Popup message={message} setMessage={setMessage} />
       <div className="w-full flex justify-center mb-4">
-        <div className="flex flex-wrap w-[90%] max-w-[1750px] justify-between gap-1">
+        <div className="flex flex-wrap w-[95%] md:w-[90%] max-w-[1750px] justify-between gap-1">
           {products.map((value) => {
             return (
               <section
-                className="w-[22%] min-w-[200px] mb-8 flex flex-col"
+                className="w-[49%] shadow-md mb-2 md:mb-8 flex flex-col md:min-w-[200px] rounded-md p-1 border md:w-[22%]"
                 key={value.images[0]}
               >
                 <a className="w-full" href={`/product/${value.id}`}>
                   <img
                     src={value?.images[0]}
-                    className="w-full object-cover rounded-lg h-[200px]"
+                    className="w-full object-cover rounded-lg h-[150px] md:h-[200px]"
                     alt="product"
                   />
                 </a>
-                <p className="text-[16px] text-gray-600 ">{value?.name}</p>
+                <p className="text-[14px] text-gray-600 ">{value?.name}</p>
                 <span className="flex gap-1 text-orange-400">
                   <IoIosStar size={16} />
                   <IoIosStar size={16} />
@@ -68,7 +68,7 @@ function Products({ products }) {
                   ${value?.price}
                 </span>
                 <button
-                  className="h-[35px] border border-blue-500  bg-blue-500 rounded-md text-[#ffffff] text-[16px] flex gap-1 justify-center items-center w-full hover:bg-transparent hover:text-blue-500"
+                  className="h-[30px] border border-blue-500  bg-blue-500 rounded-md text-[#ffffff] text-[14px] flex gap-1 justify-center items-center w-full hover:bg-transparent hover:text-blue-500"
                   onClick={() => handleAddToCart(value)}
                 >
                   <MdAddShoppingCart size={20} /> Add to cart

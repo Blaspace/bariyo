@@ -65,10 +65,10 @@ function Category() {
   ];
   return (
     <div className="flex flex-col items-center justify-center pt-5 pb-[30px]">
-      <div className="w-[90%] max-w-[1750px] flex gap-9 justify-between items-center border-b pt-[50px] pb-[50px] overflow-x-scroll">
+      <div className="w-[90%] max-w-[1750px] flex gap-9 justify-between items-center border-b pt-[20px] pb-[20px] overflow-x-scroll">
         {filter.map((value) => {
           return (
-            <section className="w-[15%] min-w-[150px]">
+            <section className="w-[15%] min-w-[100px] md:min-w-[150px]">
               <img
                 src={value?.image}
                 alt="Gadget"

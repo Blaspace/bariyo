@@ -15,7 +15,7 @@ function SingleProduct() {
   }, [params, products]);
   return (
     <div className="flex justify-center pb-[80px] pt-[50px]">
-      <div className="flex w-[90%] max-w-[1750px] gap-1 justify-center">
+      <div className="flex w-[90%] max-w-[1750px] gap-1 justify-center flex-col md:flex-row">
         <ProductImage images={singleProduct?.images} />
         <SingleProductText product={singleProduct} />
       </div>

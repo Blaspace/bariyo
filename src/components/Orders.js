@@ -69,7 +69,7 @@ function Orders() {
   
     ];
   return (
-    <div className="w-[80%] flex flex-col gap-5">
+    <div className="w-full flex flex-col gap-5">
       {orders.length ? (
         <>
           {orders.map((value) => {
