@@ -29,6 +29,8 @@ function Signup3() {
           street: info.street,
         },
       };
+      console.log(process.env.REACT_APP_API_URL);
+
       setLoading(true);
       fetch(`${process.env.REACT_APP_API_URL}/signup`, {
         method: "post",
