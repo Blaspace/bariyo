@@ -50,7 +50,7 @@ function Signup3() {
             throw "We're having a server error, please try again";
           }
         })
-        .then((data) => console.log(data))
+        .then((data) => navigate('/verify'))
         .catch((err) => console.log(err))
         .finally(() => setLoading(false));
     }
