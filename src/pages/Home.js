@@ -19,7 +19,7 @@ function Home() {
       <Products products={products} />
       <div className="w-full flex justify-center mb-10">
         <div className=" w-[90%] max-w-[1750px] flex justify-center">
-          <a href="/shop">
+          <a href="/shop/all">
           <button className="h-[40px] border border-blue-500 bg-blue-500 rounded-md text-[#ffffff] text-[16px] flex gap-1 justify-center items-center w-[120px] hover:bg-transparent hover:text-blue-500">
             See More
           </button>

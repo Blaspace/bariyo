@@ -19,7 +19,7 @@ function CartItems() {
     for (let i = 0; i < cartItems.length; i++) {
       let value = cartItems[i];
       if (value.images[0] === img[0]) {
-        value.num = value.num + 1;
+        cartItems[i].num = cartItems[i].num + 1;
         newArr.push(value);
       } else {
         newArr.push(value);
@@ -75,7 +75,7 @@ function CartItems() {
                             (65 peaple)
                           </p>
                         </span>
-                        <p>${value?.price}</p>
+                        <p>&#8358;{(value?.price * value.num).toLocaleString()}</p>
                       </span>
                     </div>
                     <section className="flex flex-col gap-5 items-end">

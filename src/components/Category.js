@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Category() {
+  const navigate = useNavigate();
   const filter = [
     {
       image: require("../public/women.png"),
@@ -68,7 +70,10 @@ function Category() {
       <div className="w-[90%] max-w-[1750px] flex gap-9 justify-between items-center border-b pt-[20px] pb-[20px] overflow-x-scroll">
         {filter.map((value) => {
           return (
-            <section className="w-[15%] min-w-[100px] md:min-w-[150px]">
+            <section
+              className="w-[15%] min-w-[100px] md:min-w-[150px]"
+              onClick={() => navigate(`/shop/${value.name}`)}
+            >
               <img
                 src={value?.image}
                 alt="Gadget"

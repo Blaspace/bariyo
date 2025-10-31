@@ -1,17 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
-import Nav from "../components/Nav";
-import Footer from "../components/Footer";
-import { useNavigate } from "react-router-dom";
-import Headers from "../components/Headers";
+import { Outlet } from "react-router-dom";
+import Loader from "./Loader";
 import ProductContext from "../context/ProductContext";
-import Orders from "../components/Orders";
-import UserOrder from "../components/UserOrder";
 
-function Profile() {
+function HandleGetUser() {
+  const [loader, setLoading] = useState(false);
   const { user, setUser } = useContext(ProductContext);
-  const navigate = useNavigate();
+
   useEffect(() => {
     if (!user) {
+      setLoading(true);
       fetch(`${process.env.REACT_APP_API_URL}/user`, {
         method: "GET",
         headers: {
@@ -24,24 +22,22 @@ function Profile() {
             return res.json();
           } else if (res.status === 401) {
             localStorage.removeItem("token");
-            navigate("/login");
           } else {
             throw "We're having a server error, please try again";
           }
         })
         .then((data) => setUser(data))
-        .catch((err) => console.log(err));
+        .catch((err) => console.log(err))
+        .finally(() => setLoading(false));
     }
   }, []);
 
   return (
     <>
-      <Nav />
-      <Headers text={"Your Account"} p={`${user?.name}, ${user?.email}`} />
-      <UserOrder />
-      <Footer />
+      <Loader loading={loader} />
+      <Outlet />
     </>
   );
 }
 
-export default Profile;
+export default HandleGetUser;

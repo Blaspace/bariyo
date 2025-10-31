@@ -30,7 +30,7 @@ function Signup3() {
         },
       };
       setLoading(true);
-      fetch("http://localhost:5000/signup", {
+      fetch(`${process.env.REACT_APP_API_URL}/signup`, {
         method: "post",
         headers: {
           "Content-Type": "application/json",

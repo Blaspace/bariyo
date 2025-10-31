@@ -18,7 +18,7 @@ function Login() {
         password,
         email,
       };
-      fetch("http://localhost:5000/login", {
+      fetch(`${process.env.REACT_APP_API_URL}/login`, {
         method: "post",
         headers: {
           "Content-Type": "application/json",

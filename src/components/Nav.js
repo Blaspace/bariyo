@@ -37,7 +37,7 @@ function Nav() {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/shop">All Products</a>
+              <a href="/shop/all">All Products</a>
             </li>
             <a href="/cart" className="relative">
               <span className="absolute top-0 right-[-3px] bg-gray-200 h-[17px] flex justify-center items-center w-[17px] rounded-full text-[12px]">

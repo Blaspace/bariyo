@@ -16,16 +16,21 @@ jobs:
         with:
           node-version: "16"
 
+      - name: create environment variables
+        run: |
+          echo "REACT_APP_API_URL=${{ secrets.REACT_APP_API_URL }}" >> .env
+          echo "REACT_APP_PUBLIC_KEY=${{ secrets.REACT_APP_PATSTACK_PK }}" >> .env
+
       - name: Build Project
         run: |
-          npm install
+          npm install --force
           CI=false npm run build
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ftp.bariyo.com.ng
-          username: go@bariyo.com.ng
-          password: KJe]7lsS@iv_df4Y
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASSWORD }}
           protocol: ftps
           local-dir: ./build/

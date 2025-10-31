@@ -16,7 +16,7 @@ function Verify() {
       const email = JSON.parse(user);
 
       setLoading(true);
-      fetch("http://localhost:5000/code/verify", {
+      fetch(`${process.env.REACT_APP_API_URL}/code/verify`, {
         method: "post",
         headers: {
           "Content-Type": "application/json",

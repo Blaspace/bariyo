@@ -4,7 +4,9 @@ const ProductContext = createContext();
 export function ProductProvider({ children }) {
   const [cartItems, setCartItems] = useState([]);
   const [user, setUser] = useState();
+  const [products, setProducts] = useState([]);
 
+  /*
   const products = [
     {
       name: "Latest London collections of Shoe",
@@ -127,7 +129,8 @@ export function ProductProvider({ children }) {
       rating: 5,
       id: 1,
     },*/
-  ];
+  //]
+
   useEffect(() => {
     const string = localStorage.getItem("cartItems");
     const items = JSON.parse(string);
@@ -136,7 +139,7 @@ export function ProductProvider({ children }) {
 
   return (
     <ProductContext.Provider
-      value={{ products, cartItems, setCartItems, user, setUser }}
+      value={{ products, setProducts, cartItems, setCartItems, user, setUser }}
     >
       {children}
     </ProductContext.Provider>

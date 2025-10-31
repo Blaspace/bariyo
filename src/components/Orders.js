@@ -42,7 +42,7 @@ function Orders() {
     {
       id: 123,
       status: "on the way",
-      total: "usd 350",
+      total: 350000,
       address: "new york, new way",
       date: "jan 12 2025",
       deliveryDate: "Jan 15 2025",
@@ -51,7 +51,7 @@ function Orders() {
     {
       id: 123,
       status: "on the way",
-      total: "usd 350",
+      total: 350000,
       address: "new york, new way",
       date: "jan 12 2025",
       deliveryDate: "Jan 15 2025",
@@ -60,14 +60,13 @@ function Orders() {
     {
       id: 123,
       status: "on the way",
-      total: "usd 350",
+      total: 350000,
       address: "new york, new way",
       date: "jan 12 2025",
       deliveryDate: "Jan 15 2025",
       product,
     },
-  
-    ];
+  ];
   return (
     <div className="w-full flex flex-col gap-5">
       {orders.length ? (
@@ -99,7 +98,7 @@ function Orders() {
                     <p className="text-orange-400">{value?.status}</p>
                     <p>{value?.deliveryDate}</p>
                     <p>{value?.address}</p>
-                    <p className="font-bold">{value?.total}</p>
+                    <p className="font-bold">&#8358;{value?.total?.toLocaleString()}</p>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -126,7 +125,7 @@ function Orders() {
                                 (65 peaple)
                               </p>
                             </span>
-                            <p>${v.price}</p>
+                            <p>&#8358;{v.price.toLocaleString()}</p>
                           </span>
                         </div>
                       </div>
