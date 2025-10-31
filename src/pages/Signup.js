@@ -43,7 +43,7 @@ function Signup() {
               Welcome to Bariyo, please signup:
             </h2>
             <br />
-            <labal className="text-gray-500">Name</labal>
+            <label className="text-gray-500">Name</label>
             <input
               type="text"
               placeholder="Enter your name"
@@ -51,7 +51,7 @@ function Signup() {
               className="w-[85%] border rounded-md h-65px p-1 border-gray-500"
             />
             <br />
-            <labal className="text-gray-500">Email</labal>
+            <label className="text-gray-500">Email</label>
             <input
               type="email"
               placeholder="Enter your email"
@@ -59,7 +59,7 @@ function Signup() {
               className="w-[85%] border rounded-md h-65px p-1 border-gray-500"
             />
             <br />
-            <labal className="text-gray-500">Phone Number</labal>
+            <label className="text-gray-500">Phone Number</label>
             <input
               type="tel"
               placeholder="Enter your phone number"

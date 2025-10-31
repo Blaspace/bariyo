@@ -44,7 +44,7 @@ function Signup2() {
               Enter your address
             </h2>
             <br />
-            <labal className="text-gray-500">Country</labal>
+            <label className="text-gray-500">Country</label>
             <input
               type="text"
               placeholder="Enter your country"
@@ -52,7 +52,7 @@ function Signup2() {
               className="w-[85%] border rounded-md h-65px p-1 border-gray-500"
             />
             <br />
-            <labal className="text-gray-500">State</labal>
+            <label className="text-gray-500">State</label>
             <input
               type="text"
               placeholder="Enter your State"
@@ -60,7 +60,7 @@ function Signup2() {
               className="w-[85%] border rounded-md h-65px p-1 border-gray-500"
             />
             <br />
-            <labal className="text-gray-500">City</labal>
+            <label className="text-gray-500">City</label>
             <input
               type="text"
               placeholder="Enter your City"
@@ -68,7 +68,7 @@ function Signup2() {
               className="w-[85%] border rounded-md h-65px p-1 border-gray-500"
             />
             <br />
-            <labal className="text-gray-500">Street</labal>
+            <label className="text-gray-500">Street</label>
             <input
               type="text"
               placeholder="Enter your street"
@@ -76,7 +76,7 @@ function Signup2() {
               className="w-[85%] border rounded-md h-65px p-1 border-gray-500"
             />
             <br />
-            <labal className="text-gray-500">Postal Code</labal>
+            <label className="text-gray-500">Postal Code</label>
             <input
               type="text"
               placeholder="Enter your postal code"

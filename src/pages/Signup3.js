@@ -14,6 +14,7 @@ function Signup3() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (password === confirm) {
+
       const data = localStorage.getItem("signupInfo");
       const info = JSON.parse(data);
       const payload = {
@@ -72,7 +73,7 @@ function Signup3() {
               Welcome to Bariyo, please set you password:
             </h2>
             <br />
-            <labal className="text-gray-500">Password</labal>
+            <label className="text-gray-500">Password</label>
             <input
               type="password"
               placeholder="Enter your password"
@@ -80,7 +81,7 @@ function Signup3() {
               className="w-[85%] border rounded-md h-65px p-1 border-gray-500"
             />
             <br />
-            <labal className="text-gray-500">Confirm password</labal>
+            <label className="text-gray-500">Confirm password</label>
             <input
               type="password"
               placeholder="Confirm password"
