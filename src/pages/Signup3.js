@@ -14,7 +14,6 @@ function Signup3() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (password === confirm) {
-
       const data = localStorage.getItem("signupInfo");
       const info = JSON.parse(data);
       const payload = {
@@ -42,13 +41,15 @@ function Signup3() {
           if (res.ok) {
             res.json();
           } else if (res.status === 409) {
+            setMessage("a user with this email already exist");
             throw "a user with this email already exist";
           } else {
+            setMessage("We're having a server error, please try again");
             throw "We're having a server error, please try again";
           }
         })
         .then((data) => console.log(data))
-        .catch((err) => setMessage(err))
+        .catch((err) => console.log(err))
         .finally(() => setLoading(false));
     }
   };
