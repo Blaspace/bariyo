@@ -15,9 +15,11 @@ function Price({ items }) {
     phone: user?.phone,
     email: user?.email,
     userId: user?._id,
-    location: user?.address[0],
-    products: [...items],
+    location: JSON.stringify(user?.address[0]),
+    products: JSON.stringify([...items]),
   };
+
+ 
 
   const componentProps = {
     email: user?.email,
