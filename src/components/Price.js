@@ -17,6 +17,7 @@ function Price({ items }) {
     userId: user?._id,
     location: JSON.stringify(user?.address[0]),
     products: JSON.stringify([...items]),
+    total: itemsCost,
   };
 
  

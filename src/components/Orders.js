@@ -1,72 +1,37 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ProductContext from "../context/ProductContext";
 import { CiMenuKebab } from "react-icons/ci";
 import { IoIosStar, IoIosStarOutline } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 function Orders() {
   const { user } = useContext(ProductContext);
-  const product = [
-    {
-      name: "Latest London collections of Shoe",
-      price: 20000,
-      rating: 5,
-      images: [require("../public/1.png")],
-      id: 1,
-    },
-
-    {
-      name: "Latest London collections of Shoe",
-      price: 20000,
-      rating: 3,
-      images: [require("../public/2.png")],
-      id: 2,
-    },
-
-    {
-      name: "Latest London collections of Shoe",
-      price: 20000,
-      images: [require("../public/3.png")],
-      rating: 4,
-      id: 3,
-    },
-    {
-      name: "Latest London collections of Shoe",
-      price: 20000,
-      images: [require("../public/4.png")],
-      rating: 3,
-      id: 4,
-    },
-  ];
-
-  const orders = [
-    {
-      id: 123,
-      status: "on the way",
-      total: 350000,
-      address: "new york, new way",
-      date: "jan 12 2025",
-      deliveryDate: "Jan 15 2025",
-      product,
-    },
-    {
-      id: 123,
-      status: "on the way",
-      total: 350000,
-      address: "new york, new way",
-      date: "jan 12 2025",
-      deliveryDate: "Jan 15 2025",
-      product,
-    },
-    {
-      id: 123,
-      status: "on the way",
-      total: 350000,
-      address: "new york, new way",
-      date: "jan 12 2025",
-      deliveryDate: "Jan 15 2025",
-      product,
-    },
-  ];
+  const [orders, setOrders] = useState([])
+  const navigate = useNavigate()
+  
+  useEffect(()=>{
+if (!orders?.length) {
+      fetch(`${process.env.REACT_APP_API_URL}/user/order`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      })
+        .then((res) => {
+          if (res.ok) {
+            return res.json();
+          } else if (res.status === 401) {
+            localStorage.removeItem("token");
+            navigate("/login");
+          } else {
+            throw "We're having a server error, please try again";
+          }
+        })
+        .then((data) => setOrders(data))
+        .catch((err) => console.log(err));
+    }
+  }, [])
   return (
     <div className="w-full flex flex-col gap-5">
       {orders.length ? (
@@ -76,11 +41,11 @@ function Orders() {
               <div className="w-full border rounded-md p-3">
                 <div className="flex justify-between p-3 border-b ">
                   <section>
-                    <h2 className="font-bold text-20">Order #: {value?.id}</h2>
+                    <h2 className="font-bold text-20">Order ID#: {value?.orderId}</h2>
                     <p className="flex gap-3 text-[14px] text-gray-500">
-                      <span>{value?.product?.length} products,</span>
+                      <span>{JSON.parse(value?.products[0])?.length} products,</span>
                       <span>{user?.name},</span>
-                      <span>{value?.date}</span>
+                      <span>{value?.date.slice(0, 15)}</span>
                     </p>
                   </section>
                   <section>
@@ -97,12 +62,12 @@ function Orders() {
                   <div className="flex flex-col text-gray-700">
                     <p className="text-orange-400">{value?.status}</p>
                     <p>{value?.deliveryDate}</p>
-                    <p>{value?.address}</p>
+                    <p>{JSON.parse(value?.location).street}, {JSON.parse(value?.location).city}, {JSON.parse(value?.location).country} </p>
                     <p className="font-bold">&#8358;{value?.total?.toLocaleString()}</p>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {value?.product?.map((v) => {
+                  {JSON.parse(value?.products[0])?.map((v) => {
                     return (
                       <div className="flex p-2 justify-between flex-2 w-[45%] min-w-[300px]">
                         <div className="flex gap-2">

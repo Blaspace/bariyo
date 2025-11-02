@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* HTML: <div class="loader"></div> */
 .loader {
@@ -22,11 +23,15 @@
   animation: l22 1s infinite;
 }
 .loader:after {
-  animation-delay: -.5s
+  animation-delay: -0.5s;
 }
 @keyframes l22-0 {
-  100% {transform: rotate(1turn)}
+  100% {
+    transform: rotate(1turn);
+  }
 }
 @keyframes l22 {
-  100% {transform: rotate(1turn) translate(150%)}
+  100% {
+    transform: rotate(1turn) translate(150%);
+  }
 }
