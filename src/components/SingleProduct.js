@@ -13,7 +13,7 @@ function SingleProduct() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:5000/product/get/${params.id}`)
+    fetch(`${process.env.REACT_APP_API_URL}/product/get/${params.id}`)
       .then((res) => res.json())
       .then((data) => setSingleProduct(data))
       .catch((err) => console.log(err))
