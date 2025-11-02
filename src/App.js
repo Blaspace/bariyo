@@ -14,9 +14,7 @@ import HandleGetProducts from "./components/HandleGetProducts";
 import HandleGetUser from "./components/HandleGetUser";
 
 function App() {
-  //js5618171_db_user
-  //G9EB8QOHVTUziUcz
-  //mongodb+srv://js5618171_db_user:G9EB8QOHVTUziUcz@cluster0.bklitvf.mongodb.net/
+  
   return (
     <Routes>
       <Route element={<HandleGetProducts />}>
