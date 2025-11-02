@@ -22,7 +22,7 @@ function DropdownMenu({ drop, setDrop }) {
           <a href="/">Home</a>
         </li>
         <li className="p-2">
-          <a href="/shop">All Products</a>
+          <a href="/shop/all">All Products</a>
         </li>
         <li className="p-2">
           <a href="/profile">Orders</a>
