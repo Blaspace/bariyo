@@ -21,7 +21,7 @@ function Nav() {
           <a href="/">
             <img src={require("../public/logo.jpeg")} className="w-[100px]"/>
           </a>
-          <section className="w-1/2 border border-[lightgrey] h-[35px] rounded-md p-1 hidden justify-between md:flex">
+          <section className="w-[40%] border border-[lightgrey] h-[35px] rounded-md p-1 hidden justify-between md:flex">
             <input
               type="text"
               placeholder="Search Products"
