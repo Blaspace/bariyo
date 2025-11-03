@@ -37,7 +37,7 @@ function Profile() {
   return (
     <>
       <Nav />
-      <Headers text={"Your Account"} p={`${user?.name}, ${user?.email}`} />
+      <Headers text={"Your Orders"} p={`${user?.name}, ${user?.email}`} />
       <UserOrder />
       <Footer />
     </>

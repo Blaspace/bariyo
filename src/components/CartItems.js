@@ -3,9 +3,11 @@ import Price from "./Price";
 import { IoIosStar, IoIosStarOutline } from "react-icons/io";
 import { FaRegTrashAlt } from "react-icons/fa";
 import ProductContext from "../context/ProductContext";
+import OrderLocation from "./OrderLocation";
 
 function CartItems() {
   const { cartItems, setCartItems } = useContext(ProductContext);
+  const [location, setLocation] = useState();
 
   const handleRemoveItems = (img) => {
     const newArr = cartItems.filter((value) => value.images[0] !== img[0]);
@@ -75,7 +77,9 @@ function CartItems() {
                             (65 peaple)
                           </p>
                         </span>
-                        <p>&#8358;{(value?.price * value.num).toLocaleString()}</p>
+                        <p>
+                          &#8358;{(value?.price * value.num).toLocaleString()}
+                        </p>
                       </span>
                     </div>
                     <section className="flex flex-col gap-5 items-end">
@@ -103,6 +107,7 @@ function CartItems() {
                   </div>
                 );
               })}
+              <OrderLocation setLocation={setLocation} />
             </>
           ) : (
             <div className="h-full w-full flex justify-center items-center">
@@ -110,7 +115,7 @@ function CartItems() {
             </div>
           )}
         </div>
-        <Price items={cartItems} />
+        <Price items={cartItems} location={location} />
       </div>
     </div>
   );

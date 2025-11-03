@@ -4,23 +4,22 @@ import { PaystackButton } from "react-paystack";
 import Popup from "./Popup";
 import { useNavigate } from "react-router-dom";
 
-function Price({ items }) {
+function Price({ items, location }) {
   const [itemsCost, setItemsCost] = useState(0);
   const [message, setMessage] = useState();
   const { user } = useContext(ProductContext);
   const navigate = useNavigate();
   const publicKey = process.env.REACT_APP_PUBLIC_KEY;
+
   const metadata = {
     name: user?.name,
     phone: user?.phone,
     email: user?.email,
     userId: user?._id,
-    location: JSON.stringify(user?.address[0]),
+    location: JSON.stringify(location),
     products: JSON.stringify([...items]),
     total: itemsCost,
   };
-
- 
 
   const componentProps = {
     email: user?.email,
