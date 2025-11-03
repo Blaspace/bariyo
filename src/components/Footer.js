@@ -6,9 +6,11 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Brand Section */}
         <div>
-          <h2 className="text-xl font-semibold mb-3">ShopSmart</h2>
+          <h2 className="text-xl font-semibold mb-3">Bariyo Online Store</h2>
           <p className="text-sm">
-            Your one-stop store for quality fashion. We bring you the best at affordable prices.
+           Welcome to Bariyo Online Store your trusted destination for quality products at affordable prices.
+We are a proudly Nigerian e-commerce platform based in Kuje, Abuja, committed to bringing convenience, variety, and value to shoppers across the country.
+
           </p>
         </div>
 
