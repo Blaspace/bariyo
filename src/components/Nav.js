@@ -19,7 +19,7 @@ function Nav() {
       <nav className="h-[70px] flex justify-center items-center shadow-sm bg-white">
         <div className="w-[90%] max-w-[1750px] flex justify-between items-center">
           <a href="/">
-            <p className="font-bold">Logo</p>
+            <img src={require("../public/logo.jpeg")} className="w-[100px]"/>
           </a>
           <section className="w-1/2 border border-[lightgrey] h-[35px] rounded-md p-1 hidden justify-between md:flex">
             <input
