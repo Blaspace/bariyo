@@ -33,7 +33,7 @@ function Filter() {
       `${process.env.REACT_APP_API_URL}/product/get?category=${params.category}`
     )
       .then((res) => res.json())
-      .then((data) => setProducts(data?.products))
+      .then((data) => setProducts(data))
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
   }, [params]);

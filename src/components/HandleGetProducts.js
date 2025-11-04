@@ -12,7 +12,7 @@ function HandleGetProducts() {
       setLoading(true);
       fetch(`${process.env.REACT_APP_API_URL}/product/get`)
         .then((res) => res.json())
-        .then((data) => setProducts(data?.products))
+        .then((data) => setProducts(data))
         .catch((err) => console.log(err))
         .finally(() => setLoading(false));
     }

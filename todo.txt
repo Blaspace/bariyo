@@ -1,0 +1,10 @@
+							ADMIN DASHBOARD
+1) property edit, delete and details*
+2) order details, and update*
+3) order search by order id*
+
+							Ecommerce shop
+1) search
+2) property reviews
+3) load more property
+4) About

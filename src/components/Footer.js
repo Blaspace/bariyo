@@ -8,9 +8,10 @@ const Footer = () => {
         <div>
           <h2 className="text-xl font-semibold mb-3">Bariyo Online Store</h2>
           <p className="text-sm">
-           Welcome to Bariyo Online Store your trusted destination for quality products at affordable prices.
-We are a proudly Nigerian e-commerce platform based in Kuje, Abuja, committed to bringing convenience, variety, and value to shoppers across the country.
-
+            Welcome to Bariyo Online Store your trusted destination for quality
+            products at affordable prices. We are a proudly Nigerian e-commerce
+            platform based in Kuje, Abuja, committed to bringing convenience,
+            variety, and value to shoppers across the country.
           </p>
         </div>
 
@@ -18,10 +19,26 @@ We are a proudly Nigerian e-commerce platform based in Kuje, Abuja, committed to
         <div>
           <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="/" className="hover:text-gray-900">Home</a></li>
-            <li><a href="/shop" className="hover:text-gray-900">Shop</a></li>
-            <li><a href="/about" className="hover:text-gray-900">About</a></li>
-            <li><a href="/contact" className="hover:text-gray-900">Contact</a></li>
+            <li>
+              <a href="/" className="hover:text-gray-900">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/shop" className="hover:text-gray-900">
+                Shop
+              </a>
+            </li>
+            <li>
+              <a href="/about" className="hover:text-gray-900">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="/contact" className="hover:text-gray-900">
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
 
@@ -29,9 +46,21 @@ We are a proudly Nigerian e-commerce platform based in Kuje, Abuja, committed to
         <div>
           <h3 className="text-lg font-semibold mb-3">Customer Support</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="/faq" className="hover:text-gray-900">FAQs</a></li>
-            <li><a href="/returns" className="hover:text-gray-900">Return Policy</a></li>
-            <li><a href="/shipping" className="hover:text-gray-900">Shipping Info</a></li>
+            <li>
+              <a href="/faq" className="hover:text-gray-900">
+                FAQs
+              </a>
+            </li>
+            <li>
+              <a href="/returns" className="hover:text-gray-900">
+                Return Policy
+              </a>
+            </li>
+            <li>
+              <a href="/shipping" className="hover:text-gray-900">
+                Shipping Info
+              </a>
+            </li>
           </ul>
         </div>
 

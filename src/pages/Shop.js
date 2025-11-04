@@ -5,16 +5,18 @@ import Footer from "../components/Footer";
 import ProductContext from "../context/ProductContext";
 import Headers from "../components/Headers";
 import Filter from "../components/Filter";
+import LoadmoreButton from "../components/LoadmoreButton";
 
 function Shop() {
   const { products } = useContext(ProductContext);
   return (
     <>
       <Nav />
-      <br/>
+      <br />
       <Headers text={"All Product"} />
-      <Filter/>
+      <Filter />
       <Products products={products} />
+      <LoadmoreButton />
       <Footer />
     </>
   );

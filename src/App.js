@@ -12,13 +12,15 @@ import Verify from "./pages/EmailVerification";
 import Profile from "./pages/Profile";
 import HandleGetProducts from "./components/HandleGetProducts";
 import HandleGetUser from "./components/HandleGetUser";
+import About from "./pages/About";
+import Search from "./pages/Search";
 
 function App() {
-  
   return (
     <Routes>
       <Route element={<HandleGetProducts />}>
         <Route element={<HandleGetUser />}>
+          <Route path="/about" element={<About />} />
           <Route path="/" element={<Home />} />
           <Route path="/shop/:category" element={<Shop />} />
           <Route path="/profile" element={<Profile />} />
@@ -28,6 +30,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup2" element={<Signup2 />} />
           <Route path="/signup3" element={<Signup3 />} />
+          <Route path="/search/:search" element={<Search />} />
           <Route path="/verify" element={<Verify />} />
         </Route>
       </Route>

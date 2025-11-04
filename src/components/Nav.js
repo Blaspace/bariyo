@@ -5,11 +5,14 @@ import ProductContext from "../context/ProductContext";
 import { CiUser } from "react-icons/ci";
 import { IoIosMenu } from "react-icons/io";
 import DropdownMenu from "./DropdownMenu";
+import { useNavigate } from "react-router-dom";
 
 function Nav() {
   const { cartItems } = useContext(ProductContext);
   const [drop, setDrop] = useState(false);
   const [token, setToken] = useState("");
+  const [search, setSearch] = useState();
+  const navigate = useNavigate();
   useEffect(() => {
     const str = localStorage.getItem("token");
     setToken(str);
@@ -19,19 +22,23 @@ function Nav() {
       <nav className="h-[70px] flex justify-center items-center shadow-sm bg-white">
         <div className="w-[90%] max-w-[1750px] flex justify-between items-center">
           <a href="/">
-            <img src={require("../public/logo.jpeg")} className="w-[100px]"/>
+            <img src={require("../public/logo.jpeg")} className="w-[100px]" />
           </a>
-          <section className="w-[40%] border border-[lightgrey] h-[35px] rounded-md p-1 hidden justify-between md:flex">
+          <form className="w-[40%] border border-[lightgrey] h-[35px] rounded-md p-1 hidden justify-between md:flex" onSubmit={(e)=> e.preventDefault()}>
             <input
               type="text"
               placeholder="Search Products"
               className="h-full w-[90%] focus:border-none focus:outline-none"
+              onChange={(e) => setSearch(e.target.value)}
             />
             <b className="h-full border border-[lightgrey]"></b>
-            <span className="h-full w-[10%] flex justify-center items-center text-[grey] hover:text-black">
+            <button
+              className="h-full w-[10%] flex justify-center items-center text-[grey] hover:text-black"
+              onClick={() => search && navigate(`/search/${search}`)}
+            >
               <MdSearch size={20} />
-            </span>
-          </section>
+            </button>
+          </form>
           <ul className="hidden gap-[40px] items-center text-[14px] md:flex">
             <li>
               <a href="/">Home</a>

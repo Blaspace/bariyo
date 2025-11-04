@@ -2,10 +2,13 @@ import React, { useContext, useState } from "react";
 import { MdAddShoppingCart } from "react-icons/md";
 import ProductContext from "../context/ProductContext";
 import Popup from "./Popup";
+import { CiHeart } from "react-icons/ci";
+import ProductRatingPopup from "./RateProduct";
 
 function SingleProductText({ product }) {
   const { cartItems, setCartItems } = useContext(ProductContext);
   const [message, setMessage] = useState();
+  const [isOpen, setIsOpen] = useState(null);
 
   const handleAddToCart = (product) => {
     const existingItems = localStorage.getItem("cartItems");
@@ -37,12 +40,20 @@ function SingleProductText({ product }) {
 
   return (
     <>
+      <ProductRatingPopup isOpen={isOpen} setIsOpen={setIsOpen} />
       <Popup message={message} setMessage={setMessage} />
       <div className="flex flex-col gap-3 md:w-[40%] p-3">
-        <h1 className="md:text-[35px] text-[20px] border-b">{product?.name}</h1>
+        <h1 className="md:text-[25px] flex justify-between items-center text-[20px] border-b">
+          {product?.name}
+          <CiHeart
+            onClick={() => setIsOpen(product)}
+            size={30}
+            className="text-blue-500"
+          />
+        </h1>
         <p>{product?.description}</p>
         <div>
-          <p>&#8358;{product?.price.toLocaleString()}</p>
+          <p>&#8358;{product?.price?.toLocaleString()}</p>
           <small>{product?.inStock} In stock</small>
         </div>
         <button

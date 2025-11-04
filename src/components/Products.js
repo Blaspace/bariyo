@@ -43,13 +43,13 @@ function Products({ products }) {
   return (
     <>
       <Popup message={message} setMessage={setMessage} />
-      <div className="w-full flex justify-center mb-4">
+      <div className="w-full flex  flex-col items-center mb-4">
         <div className="flex flex-wrap w-[95%] md:w-[90%] max-w-[1750px] justify-between gap-1">
-          {products?.map((value) => {
+          {products?.products?.map((value) => {
             return (
               <section
-                className="w-[49%] shadow-md mb-2 md:mb-8 flex flex-col md:min-w-[200px] rounded-md p-1 border md:w-[22%]"
-                key={value?.name}
+                className="w-[49%] shadow-md mb-2 md:mb-8 flex flex-col md:min-w-[200px] rounded-md p-1 md:w-[22%]"
+                key={value?._id}
               >
                 <a className="w-full" href={`/product/${value?._id}`}>
                   <img
@@ -79,6 +79,7 @@ function Products({ products }) {
             );
           })}
         </div>
+       
       </div>
     </>
   );
