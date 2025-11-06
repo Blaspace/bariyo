@@ -35,8 +35,8 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="/contact" className="hover:text-gray-900">
-                Contact
+              <a href="/faq" className="hover:text-gray-900">
+                FAQ
               </a>
             </li>
           </ul>
@@ -44,23 +44,14 @@ const Footer = () => {
 
         {/* Customer Support */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">Customer Support</h3>
+          <h3 className="text-lg font-semibold mb-3">Contact</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="/faq" className="hover:text-gray-900">
-                FAQs
-              </a>
+              Authentic plaza 56b Azikoro road, Ekeki , Yenagoa, Bayelsa state
             </li>
-            <li>
-              <a href="/returns" className="hover:text-gray-900">
-                Return Policy
-              </a>
-            </li>
-            <li>
-              <a href="/shipping" className="hover:text-gray-900">
-                Shipping Info
-              </a>
-            </li>
+            <li>E119, New Kuje shopping Complex</li>
+            <li>09118818888,</li>
+            <li>09118818887</li>
           </ul>
         </div>
 

@@ -14,6 +14,7 @@ import HandleGetProducts from "./components/HandleGetProducts";
 import HandleGetUser from "./components/HandleGetUser";
 import About from "./pages/About";
 import Search from "./pages/Search";
+import Faq from "./pages/Faq";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route element={<HandleGetProducts />}>
         <Route element={<HandleGetUser />}>
           <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<Faq />} />
           <Route path="/" element={<Home />} />
           <Route path="/shop/:category" element={<Shop />} />
           <Route path="/profile" element={<Profile />} />

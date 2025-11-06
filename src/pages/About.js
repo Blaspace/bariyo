@@ -13,16 +13,17 @@ function About() {
           <br />
           <h1 className="font-bold text-[30px]">About Us</h1>
           <p>
-            Welcome to Bariyo Online Store your trusted destination for
-            quality products at affordable prices. We are a proudly Nigerian
-            e-commerce platform based in Kuje, Abuja, committed to bringing
-            convenience, variety, and value to shoppers across the country. At
-            Bariyo.com.ng, we believe online shopping should be simple,
-            reliable, and enjoyable. Our platform offers a wide range of
-            products across different categories from fashion, electronics,
-            and home essentials to beauty products, groceries, and more. Whether
-            you’re shopping for yourself, your home, or your business, Bariyo
-            provides a seamless experience from browsing to delivery.
+            At Bariyo Stores, we believe shopping should be simple, affordable,
+            and exciting. We are your one-stop destination for quality products
+            from everyday essentials to the latest tech gadgets, all offered at
+            unbeatable prices. Driven by a passion for excellence, Bariyo Stores
+            is committed to giving customers a reliable shopping experience
+            built on trust, value, and satisfaction. Whether you’re shopping
+            online or in-store, our goal is to make every purchase worth your
+            while. We don’t just sell products , we deliver convenience, style,
+            and innovation right to your doorstep. With Bariyo Stores, you’re
+            not just buying; you’re joining a community that values quality and
+            affordability. Bariyo Stores — Shop Smart. Live Better.
           </p>
           <br />
           <h1 className="font-bold text-[30px]">Our Mission</h1>
@@ -43,8 +44,8 @@ function About() {
 
           <p>
             <b>Wide Product Range:</b> Everything you need in one place. Fast &
-            Reliable Delivery: From our Kuje office to your doorstep swiftly
-            and safely.
+            Reliable Delivery: From our Kuje office to your doorstep swiftly and
+            safely.
             <br />
             <b>Affordable Prices:</b> Enjoy great deals and discounts every day.
             <br />
