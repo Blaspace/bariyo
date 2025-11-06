@@ -48,7 +48,7 @@ function Products({ products }) {
           {products?.products?.map((value) => {
             return (
               <section
-                className="w-[49%] shadow-md mb-2 md:mb-8 flex flex-col md:min-w-[200px] rounded-md p-1 md:w-[22%]"
+                className="w-[49%] shadow-sm mb-2 md:mb-8 flex flex-col md:min-w-[200px] rounded-md p-1 md:w-[22%]"
                 key={value?._id}
               >
                 <a className="w-full" href={`/product/${value?._id}`}>

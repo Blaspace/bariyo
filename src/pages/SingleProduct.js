@@ -13,7 +13,7 @@ function SingleProduct() {
       <Nav />
       <SingleProducts />
       <Headers text={"More products"} />
-      <Products products={products?.products?.slice(0, 12)} />
+      <Products products={products} />
       <Footer />
     </>
   );
