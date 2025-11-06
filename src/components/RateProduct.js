@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Loader from "./Loader";
+import Popup from "./Popup";
 
 export default function ProductRatingPopup({ isOpen, setIsOpen }) {
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState("");
   const [loading, setLoading] = useState(false);
+  const [msg, setMsg] = useState();
 
   const handleSubmit = () => {
     if (rating !== 0) {
@@ -22,7 +24,7 @@ export default function ProductRatingPopup({ isOpen, setIsOpen }) {
         }),
       })
         .then((res) => res.json())
-        .then((data) => console.log(data))
+        .then((data) => setMsg("Than you for your feedback"))
         .catch((err) => console.log(err))
         .finally(() => setLoading(false));
       setIsOpen(false);
@@ -50,6 +52,7 @@ export default function ProductRatingPopup({ isOpen, setIsOpen }) {
 
   return (
     <>
+      <Popup message={msg} setMessage={setMsg} />
       <Loader loading={loading} />
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
