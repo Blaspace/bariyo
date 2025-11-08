@@ -33,7 +33,7 @@ function Verify() {
           }
         })
         .then((data) => {
-          localStorage.setItem("token", JSON.stringify(data.accessToken));
+          localStorage.setItem("token", JSON.stringify(data.token));
           navigate("/");
         })
         .catch((err) => console.log(err))
