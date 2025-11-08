@@ -48,7 +48,7 @@ function Cart() {
       />
       <CartItems />
       <Headers text={"Customers also bought these"} />
-      <Products products={products.slice(0, 12)} />
+      <Products products={products} />
       <Footer />
     </>
   );

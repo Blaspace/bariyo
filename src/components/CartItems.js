@@ -78,7 +78,7 @@ function CartItems() {
                           </p>
                         </span>
                         <p>
-                          &#8358;{(value?.price * value.num).toLocaleString()}
+                          &#8358;{(value?.price * value?.num).toLocaleString()}
                         </p>
                       </span>
                     </div>
