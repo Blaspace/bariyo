@@ -66,7 +66,7 @@ function Verify() {
 
             <labal className="text-gray-500">Code</labal>
             <input
-              type="password"
+              type="number"
               placeholder="Confirm password"
               onChange={(e) => setCode(e.target.value)}
               className="w-[85%] border rounded-md h-65px p-1 border-gray-500"
