@@ -25,7 +25,7 @@ function Verify() {
       })
         .then((res) => {
           if (res.ok) {
-            res.json();
+           return res.json();
           } else if (res.status === 401) {
             setMessage(
               "the verification code you sent was invalid please try agein"
@@ -33,8 +33,6 @@ function Verify() {
           }
         })
         .then((data) => {
-          console.log(data);
-          
           localStorage.setItem("token", JSON.stringify(data.token));
           navigate("/");
         })
