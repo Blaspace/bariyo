@@ -24,7 +24,7 @@ function SingleProduct() {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`${process.env.REACT_APP_API_URL}/review`)
+    fetch(`${process.env.REACT_APP_API_URL}/review/${params.id}`)
       .then((res) => res.json())
       .then((data) => setReview(data))
       .catch((err) => console.log(err))
